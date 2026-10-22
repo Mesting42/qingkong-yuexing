@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>护盾绘制夹具 · 非实玩成绩</title><style>body{margin:20px;background:#edf1e6;color:#284d5a;font:14px 'Microsoft YaHei',sans-serif}canvas{width:min(100%,864px);height:auto;display:block}p{margin:12px 0;line-height:1.8}</style></head><body><h1>独立护盾 · 四主题绘制校验</h1><p>绘制夹具，只核对道具与间隙、鸟和星星的视觉区别，不计作实际游玩或拾取验证。</p><canvas width="864" height="640" aria-label="四主题中的青色护盾图案"></canvas><script type="module">
+import {THEMES,SKINS} from '/src/config.ts';
+import {shieldShape,starShape,drawBird,pillar,scene,loadPaintings} from '/src/render/art.ts';
+const canvas=document.querySelector('canvas'),c=canvas.getContext('2d');
+loadPaintings();
+function draw(){THEMES.forEach((theme,i)=>{c.save();c.translate(i%2*432,Math.floor(i/2)*320);c.beginPath();c.rect(0,0,432,320);c.clip();scene(c,432,320,theme,0,true);pillar(c,275,87,62,true,theme,.5);pillar(c,275,241,62,false,theme,.5);drawBird(c,112,164,.78,0,-.2,SKINS[0]);shieldShape(c,306,164,0);starShape(c,249,153,9);c.fillStyle='#faf4e4';c.fillRect(9,9,100,28);c.fillStyle='#284d5a';c.font='15px sans-serif';c.fillText(theme.name,17,29);c.restore();});}
+draw();setTimeout(draw,500);
+</script></body></html>
