@@ -81,3 +81,14 @@ npm run preview
 - [视觉规范](DESIGN.md)：从实际交付画面记录的配色、排版和适配规则。
 
 已知限制：没有真实 iOS Safari / Android 浏览器和平板硬件实测；浏览器竖屏尺寸检查不等同于真实设备验证。没有离线安装/PWA 缓存，首次访问需要托管服务可达；加载后游玩不依赖外部接口。强制刷新或关闭页面会丢失尚未结算的一局；已结算的进度保留。多标签同时游戏采用最后一次本地保存，不提供跨标签合并或云同步。
+
+<!-- pixel-pier-game-listing:start -->
+## Game listing / 游戏展示
+
+- **Game developer / 游戏开发者:** Mest ([@Mesting42](https://github.com/Mesting42))
+- **Pixel Pier listing / 游戏展示页面:** [Skyward Flight](https://riverglint.link/games/qingkong-yuexing/)
+
+This game is listed on Pixel Pier with a play entry and game guide. This link identifies a game-development and listing relationship; it does not identify the developer as the website operator or operating entity.
+
+本游戏在 Pixel Pier 展示，并提供游玩入口与游戏指南。此链接仅表示游戏开发与展示关联，不代表开发者是该网站的运营者或运营主体。
+<!-- pixel-pier-game-listing:end -->
